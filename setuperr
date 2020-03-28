@@ -1,0 +1,35 @@
+2020-03-28 13:24:52, Error                        [sysreset.exe]  (WinRE)WinReIsInstalledOnSystemPartitionInternal() Invalid parameters
+2020-03-28 14:00:14, Error                 CSI    00000bcc@2020/3/28:13:00:14.821 (F) onecore\base\wcp\rtllib\win32lib\delta_library.cpp(287): Error NTSTATUS_FROM_WIN32(ERROR_INVALID_DATA) originated in function Windows::Rtl::DeltaDecompressBuffer expression: g_pfnApplyDeltaB(( (DELTA_FLAG_TYPE)0x00000000 ), ReferenceInput, CompressedInput, &UncompressedOutput)
+[gle=0x80004005]
+2020-03-28 14:00:14, Error                 CSI    00000bcd (F) Failed on generating delta for: [l:34]'System.IdentityModel.Selectors.dll'[gle=0x80004005]
+2020-03-28 14:00:14, Error                 CSI    00000bd2 (F) STATUS_OBJECT_NAME_NOT_FOUND #11751303# from Windows::Rtl::SystemImplementation::DirectFileSystemProvider::SysCreateFile(flags = (AllowSharingViolation), handle = {provider=NULL, handle=0, name= ("null")}, da = (SYNCHRONIZE|FILE_READ_ATTRIBUTES), oa = @0xb17e77d8c0->OBJECT_ATTRIBUTES {s:48; rd:NULL; on:[162]'\??\C:\$WINDOWS.~BT\NewOS\Windows\WinSxS\msil_system.identitymodel.selectors_b77a5c561934e089_4.0.14305.0_none_5bef289d67dbdbba\System.IdentityModel.Selectors.dll'; a:(OBJ_CASE_INSENSITIVE)}, iosb = @0xb17e77d9d0, as = (null), fa = 0, sa = (FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE), cd = FILE_OPEN, co = (FILE_SYNCHRONOUS_IO_NONALERT|0x00004000), eab = NULL, eal = 0, disp = Invalid)
+[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bd3@2020/3/28:13:00:14.837 (F) onecore\base\wcp\sil\merged\ntu\ntsystem.cpp(2898): Error STATUS_OBJECT_NAME_NOT_FOUND originated in function Windows::Rtl::SystemImplementation::DirectFileSystemProvider::SysCreateFile expression: (null)
+[gle=0x80004005]
+2020-03-28 14:00:14, Error                 CSI    00000bd4 (F) STATUS_OBJECT_NAME_NOT_FOUND #11751302# from Windows::Rtl::SystemImplementation::CDirectory::OpenExistingFile(...)[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bd5 (F) STATUS_OBJECT_NAME_NOT_FOUND #11751301# from Windows::Rtl::SystemImplementation::CDirectory_IRtlDirectoryTearoff::OpenExistingFile(flags = 0, da = (FILE_GENERIC_READ), oa = @0xb17e77e480->SIL_OBJECT_ATTRIBUTES {s:40; on:"System.IdentityModel.Selectors.dll"; a:(OBJ_CASE_INSENSITIVE)}, sa = (FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE), oo = (FILE_SYNCHRONOUS_IO_NONALERT|FILE_NON_DIRECTORY_FILE|FILE_OPEN_FOR_BACKUP_INTENT), file = NULL, disp = (null))
+[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bd6 (F) STATUS_OBJECT_NAME_NOT_FOUND #11751290# from CGacPrimitiveInstaller::ProcessComponentChange(...)[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bd7 (F) STATUS_OBJECT_NAME_NOT_FOUND #11751110# from PrimitiveInstaller::CCoordinator::ProcessChange(Change (null) -> 4.0.14305.0 for System.IdentityModel.Selectors, arch msil, versionScope neutral, pkt {l:8 b:b77a5c561934e089})[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bd9 (F) STATUS_OBJECT_NAME_NOT_FOUND #9148314# from CCSDirectTransaction::PerformChangeAnalysis(...)[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bda (F) STATUS_OBJECT_NAME_NOT_FOUND #9148313# from CCSDirectTransaction::PrepareForCommit(...)[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bdb (F) STATUS_OBJECT_NAME_NOT_FOUND #9148312# from CCSDirectTransaction::ExamineTransaction(...)[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bdc (F) STATUS_OBJECT_NAME_NOT_FOUND #9148311# from CCSDirectTransaction_IRtlTransaction::ExamineTransaction(...)[gle=0xd0000034]
+2020-03-28 14:00:14, Error                 CSI    00000bdd (F) HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) #9074481# from Windows::COM::CPendingTransaction::IStorePendingTransaction_Analyze(...)[gle=0x80070002]
+2020-03-28 14:00:14, Error                 CSI    00000bde (F) HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND) #8947268# from Windows::ServicingAPI::CCSITransaction::ICSITransaction2_Analyze(Flags = 0, riid = {7a8b78de-d107-46ca-812b-8e3f1c163270}, ppUnk = NULL, disp = 0)[gle=0x80070002]
+2020-03-28 14:00:14, Error                 CBS    Failed to process single phase execution. [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
+2020-03-28 14:00:14, Error                 CBS    Failed to perform operation.  [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
+2020-03-28 14:00:15, Error                 SP     CReconstructOS::ReconstructWindows: ::ReconstructWindows failed: 0x80070002
+2020-03-28 14:00:15, Error                 SP     CReconstructOS::DoExecute: Servicing stack failed to reconstruct OS: 0x80070002
+2020-03-28 14:00:15, Error                 SP     Operation failed: Reconstruct OS from Packages. Error: 0x80070002[gle=0x000000b7]
+2020-03-28 14:00:15, Error                        0x80004005 in PushButtonReset::OpExecSetup::InternalExecute (base\reset\engine\operations\src\execsetup.cpp:1277): Operation execution failed: System State: [4]
+2020-03-28 14:00:15, Error                        0x80004005 in PushButtonReset::Operation::Execute (base\reset\engine\exec\src\operation.cpp:466): Internal failure in subtype execution routine
+2020-03-28 14:00:15, Error                        0x80004005 in PushButtonReset::Executer::Execute (base\reset\engine\exec\src\executer.cpp:349): Internal error while executing operation
+2020-03-28 14:00:15, Error                        0x80004005 in ResetExecute (base\reset\engine\dll\clientapi.cpp:774): Failed to execute offline operation queue
+2020-03-28 14:00:17, Error                        0x800c0006 in PushButtonReset::XmlDocument::ReportError (base\reset\util\src\xml.cpp:217): Invalid XML (line 0, position 0): Le système ne trouve pas l’objet spécifié.
+
+2020-03-28 14:00:17, Error                        0x8007000d in PushButtonReset::XmlDocument::LoadFile (base\reset\util\src\xml.cpp:100): The contents of C:\$SysReset\Rollback.xml cannot be parsed
+2020-03-28 14:00:17, Error                        0x8007000d in PushButtonReset::SerializeDocument::Load (base\reset\util\src\serialize.cpp:99): Failed to load [C:\$SysReset\Rollback.xml]
+2020-03-28 14:00:17, Error                        0x8007000d in PushButtonReset::RollbackState::Load (base\reset\engine\session\src\rollback.cpp:148): Failed to load rollback state file from [C:\$SysReset\Rollback.xml]
+2020-03-28 14:21:13, Error                        0x80004005 in srResetMain (base\reliability\recovery\sysreset\sysreset.cpp:2172): 
+2020-03-28 14:21:13, Error                        wWinMain: srResetMain failed: 0x80004005
